@@ -1,0 +1,32 @@
+<div class="valentine-wrapper">
+    <div class="hearts">
+  <span *ngFor="let h of hearts">💖</span>
+</div>
+
+  <div class="valentine-card">
+
+    <h2 *ngIf="!accepted" class="title">
+      Samriddhi,<br />
+      will you be my Valentine? 💕
+    </h2>
+
+    <div *ngIf="!accepted" class="button-area">
+      <button class="yes-btn" (click)="sayYes()">YES</button>
+
+      <button
+        class="no-btn"
+        (mouseenter)="moveNo()"
+        [style.transform]="'translate(' + noX + 'px,' + noY + 'px)'"
+      >
+        NO
+      </button>
+    </div>
+
+    <div *ngIf="accepted">
+      <h2>💖 YAY!!! 💖</h2>
+      <p>Best decision ever 🥰</p>
+      <p>I love you ❤️</p>
+    </div>
+
+  </div>
+</div>

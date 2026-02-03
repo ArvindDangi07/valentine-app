@@ -1,1 +1,91 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(180deg, #f8cdda, #fce4ec);
+  min-height: 100vh;
+}
+
+.valentine-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.valentine-card {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 22px;
+  padding: 45px 55px;
+  width: 560px;
+  max-width: 90%;
+  text-align: center;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+}
+
+.title {
+  font-size: 1.9rem;
+  font-weight: 500;
+  color: #2b2b2b;
+  line-height: 1.4;
+}
+
+.button-area {
+  margin-top: 35px;
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  position: relative;
+}
+
+.yes-btn {
+  background-color: #e63946;
+  color: white;
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: none;
+}
+
+.no-btn {
+  background-color: #83c215ae;
+  color: #555;
+  padding: 10px 28px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: none;
+  position: relative;
+}
+.hearts {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.hearts span {
+  position: absolute;
+  bottom: -50px;
+  font-size: 22px;
+  animation: floatUp 8s linear infinite;
+  opacity: 0.6;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(-110vh) scale(1.4);
+    opacity: 0;
+  }
+}
